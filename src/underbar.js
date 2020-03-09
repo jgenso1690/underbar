@@ -61,8 +61,12 @@
   // iterator function over each item in the input collection.
   _.each = function(collection, iterator) {
     if (Array.isArray(collection)){
-      for (var = i ; i<collection.length, i++){
-        iterator(collection[key], key, collection);
+      for (let = i ; i<collection.length, i++){
+        iterator(collection[i], i, collection);
+      }else {
+        for ( let key in collection){
+            iterator(collection[key], key, collection)
+        }
       }
     }
   };
