@@ -201,7 +201,7 @@
       var value = iterator(memo,item);
      } return value;
     }
-     if (iterator.arguments.length >= 2){
+     if (iterator.arguments.length !== 1){
         return iterator(memo,item);
       }else{
         
