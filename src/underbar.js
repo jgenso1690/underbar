@@ -202,7 +202,7 @@
      } return value;
     }
      
-    _.each(collection, function(memo,item , collection)){
+    _.each(collection, function(memo,item , collection),accumulator){
       if (accumulator !== undefined){
         accumulator = memo;
       }else{
@@ -210,7 +210,7 @@
       }
 
     }  
-return accumulator
+return accumulator;
 
 
 
