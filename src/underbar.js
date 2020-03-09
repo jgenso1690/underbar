@@ -173,10 +173,10 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
-    if (typeOf collection[0]=== "string"){
+    if (typeof accumulator === "string"){
       memo = collection[0];
-      item = accumulator
-      return iterator(memo,item)
+      item = accumulator;
+      return iterator(memo,item);
       
     }
 
@@ -192,7 +192,7 @@
       var value = iterator(memo,item);
 
      }return value;
-     
+
     
     }else {
       var memo = accumulator
