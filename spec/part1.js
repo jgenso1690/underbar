@@ -4,7 +4,7 @@
   describe('Part I', function() {
 
     describe('identity', function() {
-      var should = chai.expect();
+      var expect = chai.expect();
       checkForNativeMethods(function() {
         _.identity(1);
       });
