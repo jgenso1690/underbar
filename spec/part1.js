@@ -4,6 +4,7 @@
   describe('Part I', function() {
 
     describe('identity', function() {
+      var should = chai.expect();
       checkForNativeMethods(function() {
         _.identity(1);
       });
@@ -12,7 +13,7 @@
         var uniqueObject = {};
         expect(_.identity(1)).to.equal(1);
         expect(_.identity('string')).to.equal('string');
-        expect(_.identity(false)).to.be.equal(false);
+        expect(_.identity(false)).to.be.false;
         expect(_.identity(uniqueObject)).to.equal(uniqueObject);
       });
     });
