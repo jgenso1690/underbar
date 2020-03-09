@@ -198,7 +198,7 @@
       var memo = accumulator
       for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
-      var value = iterator(memo,item);
+      var value = iterator(memo,item,i);
      } return value;
     }
      
