@@ -192,6 +192,7 @@
       var value = iterator(memo,item);
 
      }return value;
+     
     
     }else {
       var memo = accumulator
