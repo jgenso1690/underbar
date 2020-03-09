@@ -37,23 +37,20 @@
 
   // Like first, but for the last elements. If n is undefined, return just the
   // last element.
-  _.last = function(array, n, index) {
-    if (index ===  0){
+  _.last = function(array, n) {
+    if (n ===  0){
       return [];
     };
       
-    if (index > array.length){
+    if (n > array.length){
       return array;
     }
-    
+
     if (n === undefined) {
        return array.pop();
         
     };
 
-    
-
-    return array.slice(array[index])
     return array.slice(n)
 
      
