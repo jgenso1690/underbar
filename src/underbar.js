@@ -180,10 +180,10 @@
     }
     
     if (accumulator === undefined){  
-     var accumulator = collection[0];  
+     var memo = collection[0];  
      for (let i= 1; i< collection.length ; i++){
       var item = collection[i];
-      var memo = accumulator
+      
       var value = iterator(memo,item);
 
      }return value;
