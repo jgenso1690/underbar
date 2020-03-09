@@ -174,8 +174,8 @@
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
     if (typeof accumulator === "string"){
-      memo = collection[0];
-      item = accumulator;
+      item = collection[0];
+       memo = accumulator;
       return iterator(memo,item);
       
     }
