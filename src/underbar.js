@@ -209,7 +209,7 @@
      
       if (iterator[arg] === undefined){
         
-          memo = collection[0];
+          memo = collection[1];
           return iterator(memo, item);
       }
 
