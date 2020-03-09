@@ -200,9 +200,11 @@
       var item = collection[i];
       var value = iterator(memo,item);
      } return value;
-     
-
-  }   
+    }
+     if (iterator.arguments.length >= 2){
+        return iterator(memo,item);
+      }
+      
   };
 
   // Determine if the array or object contains a given value (using `===`).
