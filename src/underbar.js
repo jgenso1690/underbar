@@ -177,17 +177,19 @@
       return collection[0];
     }
     
-    if (accumulator === undefined){    
+    if (accumulator === undefined){  
+     var accumulator = collection[0];  
      for (let i= 1; i< collection.length ; i++){
-      accumulator = collection[0];
       var item = collection[i];
-      iterator(accumulator,item);
-     }return accumulator;
+      var value = iterator(accumulator,item);
+
+     }return value;
     }else {
+      var memo = accumulator
       for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
-      iterator(accumulator,item);
-     } return accumulator;
+      var value = iterator(memo,item);
+     } return value;
     }
      
 
