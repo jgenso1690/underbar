@@ -117,11 +117,18 @@
 
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
+    
+
   };
 
 
   // Return the results of applying an iterator to each element.
   _.map = function(collection, iterator) {
+      var newarr = [];
+    for (let i =0; i<collection.length; i++){
+      newarr.push(iterator(collection[i]));
+    }
+    return newarr
     // map() is a useful primitive iteration function that works a lot
     // like each(), but in addition to running the operation on all
     // the members, it also maintains an array of results.
