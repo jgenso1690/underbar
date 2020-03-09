@@ -208,9 +208,9 @@
       }else{
         accumulator = iterator(accumulator, memo, item, collection);
       }
-      return accumulator
+      
     }  
-
+return accumulator
 
 
 
