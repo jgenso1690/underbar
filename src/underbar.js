@@ -205,9 +205,8 @@
         return iterator(memo,item);
       }
       
-     for (let arg= 0; arg< iterator.arguments.length ; arg++) 
-     
-      if (iterator[arg] === undefined){
+       
+      if (memo === undefined){
         
           memo = collection[1];
           return iterator(memo, item);
