@@ -6,7 +6,7 @@
     describe('identity', function() {
 
       checkForNativeMethods(function() {
-        _.identity(val);
+        _.identity(1);
       });
         var uniqueObject = {};
       it('should return whatever value is passed into it', function() {
