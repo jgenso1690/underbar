@@ -180,7 +180,7 @@
     if (accumulator === undefined){    
      for (let i= 1; i< collection.length ; i++){
       accumulator = collection[0];
-      var item = collection[1];
+      var item = collection[i];
       iterator(accumulator,item);
      }return accumulator;
     }else {
