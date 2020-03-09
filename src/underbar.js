@@ -51,7 +51,7 @@
         
     };
 
-    return array.slice(n)
+    return array.slice(-n)
 
      
   }
