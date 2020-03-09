@@ -202,14 +202,14 @@
      } return value;
     }
      
-    _.each(collection, function(memo,item , collection),accumulator){
+    _.each(collection, function(memo,item , collection){
       if (accumulator !== undefined){
         accumulator = memo;
       }else{
         accumulator = iterator(accumulator, memo, item, collection);
       }
 
-    }  
+    } ) 
 return accumulator;
 
 
