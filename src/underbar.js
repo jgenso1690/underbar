@@ -38,7 +38,7 @@
   // Like first, but for the last elements. If n is undefined, return just the
   // last element.
   _.last = function(array, n, index) {
-    if (n === undefined_) {
+    if (n === undefined) {
       return array[array.length -1];
     };
 
