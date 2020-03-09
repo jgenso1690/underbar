@@ -4,17 +4,17 @@
   describe('Part I', function() {
 
     describe('identity', function() {
-      
+
       checkForNativeMethods(function() {
-        _.identity(x);
+        _.identity(1);
       });
 
       it('should return whatever value is passed into it', function() {
         var uniqueObject = {};
-        expect(_.identity(1)).to.equal(1);
-        expect(_.identity('string')).to.equal('string');
-        expect(_.identity(false)).to.be.false;
-        expect(_.identity(uniqueObject)).to.equal(uniqueObject);
+        expect(_.identity(1)).to.equal(true);
+        expect(_.identity('string')).to.equal(true);
+        expect(_.identity(false)).to.be.true;
+        expect(_.identity(uniqueObject)).to.equal(true);
       });
     });
 
