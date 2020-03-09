@@ -203,14 +203,12 @@
     }
      if (iterator.arguments.length >= 2){
         return iterator(memo,item);
-      }
-      
-       
-      if (memo === undefined){
+      }else{
         
           memo = collection[1];
           return iterator(memo, item);
       }
+      
 
     
   };
