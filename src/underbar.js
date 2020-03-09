@@ -176,14 +176,22 @@
     if (collection.length ===1){
       return collection[0];
     }
-    if (accumulator === undefined){
-      accumulator= collection[0]+ collection[1];
-    };
     
-    for (let i= 0; i< collection.length ; i++){
-     var item = collection[i];
+    if (accumulator === undefined){    
+     for (let i= 1; i< collection.length ; i++){
+      accumulator = collection[0];
+      var item = collection[1];
       iterator(accumulator,item);
-     } return accumulator
+     }return accumulator;
+    }else {
+      for (let i= 0; i< collection.length ; i++){
+      var item = collection[i];
+      iterator(accumulator,item);
+     } return accumulator;
+    }
+     
+
+     
   };
 
   // Determine if the array or object contains a given value (using `===`).
