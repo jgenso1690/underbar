@@ -104,6 +104,13 @@
 
   // Return all elements of an array that don't pass a truth test.
   _.reject = function(collection, test) {
+    var newarray = [];
+    for (let i = 0; i<collection.length ; i++){
+      if (test(collection[i]) !== true){
+      newarray.push(collection[i]);
+      }
+    }
+    return newarray
     // TIP: see if you can re-use _.filter() here, without simply
     // copying code in and modifying it
   };
