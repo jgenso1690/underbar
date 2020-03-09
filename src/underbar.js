@@ -39,8 +39,8 @@
   // last element.
   _.last = function(array, n, index) {
     if (n === undefined) {
-       array.pop();
-       return array;
+       return array.pop();
+        
     };
 
     if (index ===  0){
