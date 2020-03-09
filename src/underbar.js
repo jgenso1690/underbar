@@ -49,11 +49,11 @@
     if (n === undefined) {
        return array.pop();
         
-    };
+    }
 
-    return array.slice(-n)
+    return array.slice(-n);
   
-  }
+  };
   // Call iterator(value, key, collection) for each element of collection.
   // Accepts both arrays and objects.
   //
@@ -61,7 +61,7 @@
   // iterator function over each item in the input collection.
   _.each = function(collection, iterator) {
     if (Array.isArray(collection)){
-      for (let i = 0 ; i<collection.length , i++){
+      for (let i = 0 ; i< collection.length ; i++){
         iterator(collection[i], i, collection);
       }else {
         for ( let key in collection){
