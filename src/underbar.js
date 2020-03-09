@@ -205,7 +205,7 @@
         return iterator(memo,item);
       }else{
         
-          memo = collection[1];
+          memo = item;
           return iterator(memo, item);
       }
       
