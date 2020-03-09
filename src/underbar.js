@@ -205,6 +205,15 @@
         return iterator(memo,item);
       }
       
+     for (let arg= 0; arg< iterator.arguments.length ; arg++) 
+     
+      if (iterator[arg] === undefined){
+        
+          memo = collection[0];
+          return iterator(memo, item);
+      }
+
+    
   };
 
   // Determine if the array or object contains a given value (using `===`).
