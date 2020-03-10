@@ -121,8 +121,9 @@
     if (function.arguments.includes("isSorted")){
       var sortedarray = array.sort();
       return iterator(array)
-    }else
+    }else{
       return iterator(array)
+    }
 
   };
 
