@@ -118,6 +118,11 @@
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
     
+    if (function.arguments.includes("isSorted")){
+      var sortedarray = array.sort();
+      return iterator(array)
+    }else
+      return iterator(array)
 
   };
 
@@ -195,6 +200,7 @@
 
     
     }else {
+      
       var memo = accumulator
       for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
@@ -202,18 +208,6 @@
      } return value;
     }
      
-    _.each(collection, function(memo,item , collection){
-      if (accumulator !== undefined){
-        accumulator = memo;
-      }else{
-        accumulator = iterator(accumulator, memo, item, collection);
-      }
-
-    } ) 
-return accumulator;
-
-
-
   };
 
   // Determine if the array or object contains a given value (using `===`).
