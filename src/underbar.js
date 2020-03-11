@@ -122,17 +122,19 @@
 
         
     if (this.isSorted === true){
-      for (var i=0; i< array.length;i++){
-           if (!uniqele.includes(array[i])){
-             uniqele.push(array[i]);
-           }
-        }
-    }else{       
-    var sorted = array.slice().sort()
+var sorted = array.slice().sort()
      
     for (var i=0; i< sorted.length;i++){
            if (!uniqele.includes(sorted[i])){
              uniqele.push(sorted[i]);
+      
+     
+           }
+        }
+    }else{       
+     for (var i=0; i< array.length;i++){
+           if (!uniqele.includes(array[i])){
+             uniqele.push(array[i]);
         }  
       }
      } 
