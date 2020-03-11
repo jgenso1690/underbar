@@ -124,18 +124,18 @@
     if (console.log(isSorted)!== undefined){
      
      for (var i=0; i< array.length;i++){
-        booleans.push(iterator(array[i]) === isSorted)
+        booleans.push(iterator(array[i]))
       }
      //i have an array of trues and falses; 
      for (var j=0; j< booleans.length;j++){
-      if (uniqele.lenght === 0){
+      if (uniqele.length === 0){
        if(booleans[j]=== isSorted){
-        var index = indexOf(booleans[j]);
+        var index = booleans.indexOf(booleans[j]);
         uniqele.push(array[index]);
        }
       }else if (uniqele.length === 1){
         if(booleans[j]!== isSorted){
-        var index = indexOf(booleans[j]);
+        var index = booleans.indexOf(booleans[j]);
         uniqele.push(array[index]);
         }
        }
