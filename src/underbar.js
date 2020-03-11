@@ -142,13 +142,13 @@
      }
      return uniqele;
     }
-    else {
-      for (var i=0; i< array.length;i++){
+
+    for (var i=0; i< array.length;i++){
         if (!uniqele.includes(array[i])){
              uniqele.push(array[i]);
         }  
       }
-    } 
+     
     return uniqele
   };
 
