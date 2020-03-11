@@ -120,21 +120,21 @@
     
     var uniqele=[];
 
-    var sorted
-
-    if (isSorted !== undefined){
-      sorted = array.sort();
+    if (isSorted === undefined){
+      for (var i=0; i< array.length;i++){
+      if (!uniqele.includes(array[i])){
+        uniqele.push(array[i]);
+      }
     }else{
-      sorted = array;
-    }
-
-
-    for (var i=0; i< sorted.length;i++){
+      var sorted = array.sort();
+      for (var i=0; i< sorted.length;i++){
       if (!uniqele.includes(sorted[i])){
         uniqele.push(sorted[i]);
       }
     }
     return uniqele
+    }
+  
   };
 
 
