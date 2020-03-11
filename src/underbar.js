@@ -118,7 +118,8 @@
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
     
-    if (function.arguments.includes("isSorted")){
+    
+    if (function.has("isSorted")){
       var sortedarray = array.sort();
       return iterator(array)
     }else{
