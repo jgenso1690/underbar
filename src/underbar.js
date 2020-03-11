@@ -126,7 +126,7 @@
      for (var i=0; i< array.length;i++){
         booleans.push(iterator(array[i]))
       }
-     //i have an array of trues and falses; 
+     
      for (var j=0; j< booleans.length;j++){
       if (uniqele.length === 0){
        if(booleans[j]=== isSorted){
