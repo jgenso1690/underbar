@@ -119,7 +119,16 @@
   _.uniq = function(array, isSorted, iterator) {
     
     var uniqele=[];
-    var sorted = array.sort()
+
+    var sorted
+
+    if (isSorted !== undefined){
+      sorted = array.sort();
+    }else{
+      sorted = array;
+    }
+
+
     for (var i=0; i< sorted.length;i++){
       if (!uniqele.includes(sorted[i])){
         uniqele.push(sorted[i]);
