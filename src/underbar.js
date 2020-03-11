@@ -119,10 +119,10 @@
   _.uniq = function(array, isSorted, iterator) {
     
     var uniqele=[];
-    array = array.sort();
-    for (var i=0; i< array.length;i++){
-      if (!uniqele.includes(array[i])){
-        uniqele.push(array[i]);
+    var sorted = array.sort()
+    for (var i=0; i< sorted.length;i++){
+      if (!uniqele.includes(sorted[i])){
+        uniqele.push(sorted[i]);
       }
     }
     return uniqele
