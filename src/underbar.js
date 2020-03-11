@@ -122,7 +122,7 @@
 
     var sorted = array.slice().sort
         
-    if (_.uniq.isSorted === undefined){
+    if (_.uniq.isSorted === true){
       for (var i=0; i< array.length;i++){
            if (!uniqele.includes(array[i])){
              uniqele.push(array[i]);
