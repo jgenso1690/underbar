@@ -207,7 +207,7 @@
     
     if (iterator.memo){
       memo = accumulator
-      for (let i= 0; i< collection.length ; i++){
+      for (let i= 1; i< collection.length ; i++){
       var item = collection[i];
       var value = iterator(memo,item,i);
      } return value;
@@ -237,7 +237,7 @@
     }else {
       
       var memo = accumulator
-      for (let i= 0; i< collection.length ; i++){
+      for (let i= 1; i< collection.length ; i++){
       var item = collection[i];
       var value = iterator(memo,item,i);
      } return value;
