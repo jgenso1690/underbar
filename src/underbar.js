@@ -128,12 +128,13 @@
     }else{
       var sorted = array.sort();
       for (var i=0; i< sorted.length;i++){
-      if (!uniqele.includes(sorted[i])){
+       if (!uniqele.includes(sorted[i])){
         uniqele.push(sorted[i]);
+       }
       }
+     }
     }
     return uniqele
-    }
   
   };
 
