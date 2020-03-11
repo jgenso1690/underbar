@@ -118,13 +118,14 @@
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
     
-    if (array.sort() !== array){
-      array = array.sort()
-      return iterator(array)
-    }else{
-      return iterator(array)
-    }
+    var uniqele=[];
 
+    for (var i=0; i< array.length;i++){
+      if (uniqele.!includes(array[i])){
+        uniqele.push(array[i]);
+      }
+    }
+    return uniqele
   };
 
 
