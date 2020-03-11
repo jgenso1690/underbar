@@ -118,24 +118,29 @@
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
     
-    var uniqele=[];     
+    var uniqele=[]; 
+    var booleans = [];    
     
     if (console.log(isSorted)!== undefined){
      
      for (var i=0; i< array.length;i++){
-        
-      if(iterator(array[i]) === isSorted){
-       uniqele.push(array[i]);
-        break
+        booleans.push(iterator(array[i]) === isSorted)
       }
+     //i have an array of trues and falses; 
+     for (var j=0; j< booleans.length;j++){
+      if (uniqele.lenght === 0){
+       if(booleans[j]=== isSorted){
+        var index = indexOf(booleans[j]);
+        uniqele.push(array[index]);
+       }
+      }else if (uniqele.length === 1){
+        if(booleans[j]!== isSorted){
+        var index = indexOf(booleans[j]);
+        uniqele.push(array[index]);
+        }
+       }
      }
-     for (var i=0; i< array.length;i++){
-       
-      if(iterator(array[i]) !== isSorted){
-        uniqele.push(array[i]);
-        break
-      }
-     }
+     return uniqele;
     }
     else {
       for (var i=0; i< array.length;i++){
