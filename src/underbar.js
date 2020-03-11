@@ -119,23 +119,25 @@
   _.uniq = function(array, isSorted, iterator) {
     
     var uniqele=[];     
-    if (this.isSorted === true){
-var sorted = array.slice().sort()
+    
+    if (_.uniq.arguments['1'] !== undefined){
      
-     for (var i=0; i< sorted.length;i++){
-      if(iterator(sorted[i]) === isSorted){
-        uniqele.push(sorted[i]);
+     for (var i=0; i< array.length;i++){
+        
+      if(iterator(array[i]) === isSorted){
+       uniqele.push(array[i]);
         break
       }
-      if(iterator(sorted[i]) !== isSorted){
-        uniqele.push(sorted[i]);
-        break
-      }
-     return uniqele   
      }
-
-
-    }else {
+     for (var i=0; i< array.length;i++){
+       
+      if(iterator(array[i]) !== isSorted){
+        uniqele.push(array[i]);
+        break
+      }
+     }
+    }
+    else {
       for (var i=0; i< array.length;i++){
         if (!uniqele.includes(array[i])){
              uniqele.push(array[i]);
