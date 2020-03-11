@@ -120,7 +120,7 @@
     
     var uniqele=[];     
     
-    if (_.uniq.arguments['1'] !== undefined){
+    if (console.log(isSorted)!== undefined){
      
      for (var i=0; i< array.length;i++){
         
