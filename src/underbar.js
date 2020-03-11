@@ -121,7 +121,7 @@
     var uniqele=[]; 
     var booleans = [];    
     
-    if (console.log(isSorted)!== undefined){
+    if (isSorted){
      
      for (var i=0; i< array.length;i++){
         booleans.push(iterator(array[i]))
