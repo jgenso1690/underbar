@@ -121,7 +121,7 @@
     var uniqele=[];
 
     for (var i=0; i< array.length;i++){
-      if (uniqele.!includes(array[i])){
+      if (!uniqele.includes(array[i])){
         uniqele.push(array[i]);
       }
     }
