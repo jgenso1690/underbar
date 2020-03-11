@@ -122,14 +122,15 @@
 
     var sorted = array.slice().sort
         
-    if (_.uniq.isSorted === true){
+    if (this.isSorted === true){
       for (var i=0; i< array.length;i++){
            if (!uniqele.includes(array[i])){
              uniqele.push(array[i]);
            }
-        }       
-     }else{
-      for (var i=0; i< sorted.length;i++){
+        }
+    }else{       
+     
+    for (var i=0; i< sorted.length;i++){
            if (!uniqele.includes(sorted[i])){
              uniqele.push(sorted[i]);
         }  
