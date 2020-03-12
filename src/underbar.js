@@ -204,10 +204,11 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
-    
+    console.log(iterator);
+    console.log(iterator.memo);
     if (iterator.memo){
       memo = accumulator
-      for (let i= 1; i< collection.length ; i++){
+      for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
       var value = iterator(memo,item,i);
      } return value;
@@ -237,7 +238,7 @@
     }else {
       
       var memo = accumulator
-      for (let i= 1; i< collection.length ; i++){
+      for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
       var value = iterator(memo,item,i);
      } return value;
