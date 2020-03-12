@@ -532,7 +532,7 @@
       });
 
       it('should pass every item of the array into the iterator if a memo is passed in', function() {
-        var result = _.reduce([1,2,3,3], function(memo, item) {
+        var result = _.reduce([1,2], function(memo, item) {
           return memo - item;
         }, 10);
 
