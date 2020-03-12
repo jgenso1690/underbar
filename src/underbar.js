@@ -225,6 +225,7 @@
     }
     
     if (iterator.memo){
+      debugger
       memo = accumulator
       for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
