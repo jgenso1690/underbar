@@ -268,7 +268,7 @@
         return true;
       }
 
-       iterator =   _.identity ||iterator
+       if (iterator === _.identity ){
        var all = true;
        return _.reduce(collection, function(all, item){
       
@@ -279,6 +279,12 @@
        return Boolean(item)
 
        }, all);
+     }else {
+      for (let i=0; i<collection.length;i++){
+        return iterator(collection[i]);
+        
+      }
+     }
       
   }
     // TIP: Try re-using reduce() here.
