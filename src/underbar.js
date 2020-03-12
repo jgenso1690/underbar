@@ -211,7 +211,7 @@
       var item = collection[i];
       
       var value = iterator(memo,item,i);
-
+      memo = value;
      }return value;
 
     
