@@ -8,14 +8,15 @@
       checkForNativeMethods(function() {
         _.identity(1);
       });
-        var uniqueObject = {};
-      it('should return whatever value is passed into it', function() {
         
+      it('should return whatever value is passed into it', function() {
+        var uniqueObject = {};
         expect(_.identity(1)).to.equal(1);
         expect(_.identity('string')).to.equal('string');
         expect(_.identity(false)).to.equal(false);
         expect(_.identity(uniqueObject)).to.equal(uniqueObject);
       });
+      
     });
 
     describe('first', function() {
@@ -531,7 +532,7 @@
       });
 
       it('should pass every item of the array into the iterator if a memo is passed in', function() {
-        var result = _.reduce([1,2,3], function(memo, item) {
+        var result = _.reduce([1,2,3,3], function(memo, item) {
           return memo - item;
         }, 10);
 
