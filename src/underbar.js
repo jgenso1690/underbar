@@ -252,9 +252,9 @@
   }
 
   else{
-    return _.reduce(collection, function(all,item,index){
-      for (let keys in obj){
-        if obj[keys] === target;
+    return _.reduce(collection, function(all,item){
+      for (let item in all){
+        if all[item] === target;
         return true;
       }
     });
