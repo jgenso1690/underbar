@@ -257,7 +257,7 @@
         if (collection[keys] === target){;
         return true;
       }
-     }
+     }return false
   }
 };
 
