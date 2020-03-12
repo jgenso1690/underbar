@@ -224,8 +224,8 @@
      } return value;
     }
     
-    if (iterator.memo){
-      debugger
+    if (iterator.arguments[0]){
+      console.log("_____--")
       memo = accumulator
       for (let i= 0; i< collection.length ; i++){
       var item = collection[i];
