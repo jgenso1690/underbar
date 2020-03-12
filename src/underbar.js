@@ -273,7 +273,7 @@
       console.log(Boolean(item)
       return Boolean(item)
 
-      }
+      })
       
     }
     // TIP: Try re-using reduce() here.
