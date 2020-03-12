@@ -267,7 +267,8 @@
       if (collection.length === 0){
         return true;
       }
-       iterator = iterator || _.identity;
+
+       iterator =   _.identity ||iterator
        var all = true;
        return _.reduce(collection, function(all, item){
       
