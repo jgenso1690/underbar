@@ -267,7 +267,7 @@
       if (wasFound) {
         return false;
       }
-      return item === target;
+      return item === iterator;
      }, true);
     }
     // TIP: Try re-using reduce() here.
