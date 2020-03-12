@@ -254,13 +254,14 @@
   else{
     return _.reduce(collection, function(all,item){
       for (let item in all){
-        if all[item] === target;
+        if (all[item] === target){;
         return true;
       }
+     }
     });
 
-
-  }
+}
+  
 }
 
   ;
