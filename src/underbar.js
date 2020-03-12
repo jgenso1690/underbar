@@ -267,7 +267,7 @@
        
     return _.reduce(collection, function(all, item){
       console.log(all)
-      if (all== false){
+      if (all=== false){
         return false;
       }
       console.log(Boolean(item))
