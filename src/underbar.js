@@ -242,13 +242,28 @@
   _.contains = function(collection, target) {
     // TIP: Many iteration problems can be most easily expressed in
     // terms of reduce(). Here's a freebie to demonstrate!
+  if (Array.isArray(collection)){
     return _.reduce(collection, function(wasFound, item) {
       if (wasFound) {
         return true;
       }
       return item === target;
     }, false);
-  };
+  }
+
+  else{
+    return _.reduce(collection, function(all,item,index){
+      for (let keys in obj){
+        if obj[keys] === target;
+        return true;
+      }
+    });
+
+
+  }
+}
+
+  ;
 
 
   // Determine whether all of the elements match a truth test.
