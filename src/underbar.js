@@ -253,19 +253,13 @@
 
   else{
     
-      for (let item in all){
-        if (all[item] === target){;
+      for (let keys in collection){
+        if (collection[keys] === target){;
         return true;
       }
      }
-
-
-}
-  
-}
-
-  ;
-
+  }
+};
 
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator) {
