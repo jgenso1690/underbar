@@ -225,16 +225,7 @@
      } return value;
     }
     
-    if (iterator.memo){
-     
-      memo = accumulator
-      for (let i= 0; i< collection.length ; i++){
-      var item = collection[i];
-      var value = iterator(memo,item,i);
-     } return value;
-    }
-
-    if (typeof accumulator === "string"){
+   if (typeof accumulator === "string"){
       item = collection[0];
        memo = accumulator;
       return iterator(memo,item);
