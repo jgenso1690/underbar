@@ -263,10 +263,10 @@
 
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator = _.identity){
-
+    var falsey = [null, undefined, 0, NaN, "", false]
 
    for (let i = 0; i<collection.length; i++){   
-    if (collection[i] === null || collection[i] === 0 || collection[i] === undefined){
+    if (collection[i].includes(falsey)){
       return false;
     }
   }
@@ -286,32 +286,8 @@
       }return true;
     }
   }
-      /*if (collection.length === 0){
-        return true;
-      }
-      var all = true
-      let reduce = _.reduce(collection, function(all, item){
-        
-        if (all=== false){
-         return false;
-        }
-       
-       return Boolean(item)
-
-       }, true);
-
-    if (iterator === _.identity){
-       return reduce
-        }else {
-          return callback(iterator)
-        }*/
-       
-
-
   
     // TIP: Try re-using reduce() here.
-
-  
 
   // Determine whether any of the elements pass a truth test. If no iterator is
   // provided, provide a default one
