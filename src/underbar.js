@@ -268,7 +268,7 @@
         return true;
       }
 
-       iterator = iterator || _.identity;
+       iterator = iterator || callback(input);
        var all = true;
 
        return _.reduce(collection, function(all, item){
