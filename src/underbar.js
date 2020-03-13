@@ -275,7 +275,7 @@
         if (iterator(collection[i]) !== true){
           return false;
         }
-      }
+      }return true;
     }
   }
       /*if (collection.length === 0){
