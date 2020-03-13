@@ -264,11 +264,9 @@
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator ){
 
-      if (arguments[1] === undefined) {
-      iterator = function(item) {
-        return item === true;
-      };
-    }
+      if (collection.length === 0){
+        return true;
+      }
 
        iterator = iterator || _.identity;
        var all = true;
@@ -276,14 +274,14 @@
       return !!test(item) && all;
 
        }, true);
-     }/*else {
+     }else {
       for (let i=0; i<collection.length;i++){
         iterator(collection[i]);
 
       }
      }
       
-  }*/
+  }
     // TIP: Try re-using reduce() here.
 
   
