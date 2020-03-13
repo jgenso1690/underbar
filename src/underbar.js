@@ -270,6 +270,7 @@
 
        iterator = iterator || _.identity;
        var all = true;
+
        return _.reduce(collection, function(all, item){
       
         if (all=== false){
@@ -278,7 +279,7 @@
        
        return Boolean(item)
 
-       }, all);
+       }, true);
      
 
       var alltrue = true;
