@@ -266,7 +266,7 @@
     var falsey = [null, undefined, 0, NaN, "", false]
 
    for (let i = 0; i<collection.length; i++){   
-    if (collection[i].includes(falsey)){
+    if (falsey.includes(collection[i])){
       return false;
     }
   }
