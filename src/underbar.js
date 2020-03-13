@@ -274,7 +274,7 @@
       return !!test(item) && all;
 
        }, true);
-     }*/else {
+     }/*else {
       for (let i=0; i<collection.length;i++){
         iterator(collection[i]);
 
