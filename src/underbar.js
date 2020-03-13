@@ -275,7 +275,7 @@
         if (all=== false){
          return false;
         }
-       console.log(Boolean(item))
+       
        return Boolean(item)
 
        }, all);
