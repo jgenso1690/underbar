@@ -283,7 +283,7 @@
 
       var alltrue = true;
       for (let i=0; i<collection.length;i++){
-        if ( iterator(collection[i] !== true);
+        if ( iterator(collection[i]) !== true);
             return false;
       }
      }
