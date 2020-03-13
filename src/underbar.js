@@ -267,12 +267,9 @@
       if (collection.length === 0){
         return true;
       }
-
-      if (iterator === _.identity){
-          var all = true;
-
-       return var reduce = _.reduce(collection, function(all, item){
-      
+      var all = true
+      var reduce = _.reduce(collection, function(all, item){
+        
         if (all=== false){
          return false;
         }
@@ -280,6 +277,9 @@
        return Boolean(item)
 
        }, true);
+
+    if (iterator === _.identity){
+       return reduce
         }else {
           callback (reduce)
         }
