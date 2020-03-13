@@ -268,25 +268,20 @@
         return true;
       }
 
-       if (iterator === _.identity ){
+       iterator = iterator || _.identity;
        var all = true;
        return _.reduce(collection, function(all, item){
-      
-        if (all=== false){
-         return false;
-        }
-       console.log(Boolean(item))
-       return Boolean(item)
+      return !!test(item) && all;
 
-       }, all);
-     }else {
+       }, true);
+     }*/else {
       for (let i=0; i<collection.length;i++){
-        return iterator(collection[i]);
-        
+        iterator(collection[i]);
+
       }
      }
       
-  }
+  }*/
     // TIP: Try re-using reduce() here.
 
   
