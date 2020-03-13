@@ -271,17 +271,24 @@
        iterator = iterator || _.identity;
        var all = true;
        return _.reduce(collection, function(all, item){
-      return !!test(item) && all;
+      
+        if (all=== false){
+         return false;
+        }
+       console.log(Boolean(item))
+       return Boolean(item)
 
-       }, true);
-     }else {
+       }, all);
+     
+
+      var alltrue = true;
       for (let i=0; i<collection.length;i++){
-        iterator(collection[i]);
-
+        if ( iterator(collection[i] !== true);
+            return false;
       }
      }
       
-  }
+  
     // TIP: Try re-using reduce() here.
 
   
