@@ -298,8 +298,8 @@
   
      if (Array.isArray(collection)){
       for (let i = 0; i< collection.length ; i++){
-        if (iterator(collection[i]){
-          return true;
+        if (iterator(collection[i]));{
+          return true ;
         }
       }
      }return false
