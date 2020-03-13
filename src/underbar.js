@@ -268,7 +268,7 @@
         return true;
       }
       var all = true
-      var reduce = _.reduce(collection, function(all, item){
+      let reduce = _.reduce(collection, function(all, item){
         
         if (all=== false){
          return false;
@@ -281,7 +281,7 @@
     if (iterator === _.identity){
        return reduce
         }else {
-          callback(iterator)
+          callback(reduce)
         }
        
 }
