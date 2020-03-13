@@ -268,7 +268,7 @@
         return true;
       }
 
-       if(iterator === identity){
+       if(iterator === _.identity){
         var all = true;
 
        return _.reduce(collection, function(all, item){
