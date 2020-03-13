@@ -281,17 +281,8 @@
 
        }, true);
      
+}
 
-      var alltrue = true;
-      for (let i=0; i<collection.length;i++){
-        if ( iterator(collection[i]) !== true);
-            alltrue = false;
-      }return alltrue
-      
-      return iterator(collection)
-
-     }
-      
   
     // TIP: Try re-using reduce() here.
 
