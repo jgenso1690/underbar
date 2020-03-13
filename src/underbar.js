@@ -287,6 +287,9 @@
         if ( iterator(collection[i]) !== true);
             alltrue = false;
       }return alltrue
+      
+      return iterator(collection)
+
      }
       
   
