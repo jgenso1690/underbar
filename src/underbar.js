@@ -268,10 +268,10 @@
         return true;
       }
 
-       
-        var all = true;
+      if (iterator === _.identity){
+          var all = true;
 
-       return _.reduce(collection, function(all, item){
+       return var reduce = _.reduce(collection, function(all, item){
       
         if (all=== false){
          return false;
@@ -280,9 +280,10 @@
        return Boolean(item)
 
        }, true);
-      
+        }else {
+          callback (reduce)
+        }
        
-     
 }
 
   
