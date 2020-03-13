@@ -264,6 +264,13 @@
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator = _.identity){
 
+
+   for (let i = 0; i<collection.length; i++){   
+    if (collection[i] === null || collection[i] === 0 || collection[i] === undefined){
+      return false;
+    }
+
+    if (collection )
     if (iterator === _.identity){
       for (let i = 0; i<collection.length; i++){
         if (collection[i] !== iterator(collection[i])){
