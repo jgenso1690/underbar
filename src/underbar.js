@@ -268,7 +268,7 @@
         return true;
       }
 
-       iterator = iterator || _.identity;
+       iterator = iterator || callback();
        var all = true;
 
        return _.reduce(collection, function(all, item){
@@ -292,6 +292,8 @@
   // provided, provide a default one
   _.some = function(collection, iterator) {
     // TIP: There's a very clever way to re-use every() here.
+  
+
   };
 
 
