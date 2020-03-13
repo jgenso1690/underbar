@@ -265,7 +265,7 @@
   _.every = function(collection, iterator ){
 
       if (arguments[1] === undefined) {
-      test = function(item) {
+      iterator = function(item) {
         return item === true;
       };
     }
