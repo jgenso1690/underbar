@@ -281,7 +281,7 @@
     if (iterator === _.identity){
        return reduce
         }else {
-          callback (reduce)
+          callback(iterator)
         }
        
 }
