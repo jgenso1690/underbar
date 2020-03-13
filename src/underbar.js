@@ -268,7 +268,7 @@
         return true;
       }
 
-       iterator = iterator || callback();
+       iterator =   callback()||iterator;
        var all = true;
 
        return _.reduce(collection, function(all, item){
