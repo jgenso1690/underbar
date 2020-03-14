@@ -428,7 +428,7 @@
         arg.push(arguments[keys])
       }
       console.log(arg)
-      console.log(func.apply(this, arg))
+      console.log(typeOf(arg[i]))
        var result = setTimeout(function() {
         func.apply(this, arg);
 
