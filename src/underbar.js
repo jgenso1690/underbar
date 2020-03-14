@@ -324,6 +324,7 @@
   //     bla: "even more stuff"
   //   }); // obj1 now contains key1, key2, key3 and bla
   _.extend = function(obj) {
+    var source = _.extend.arguments[1];
     
     for (var keys in obj){
       for (var otherkeys in source){
