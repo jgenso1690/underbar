@@ -265,10 +265,15 @@
   _.every = function(collection, iterator = _.identity){
     var falsey = [null, undefined, 0, NaN, "", false]
 
+   for (let i = 0; i<collection.length; i++){   
+    if (falsey.includes(collection[i])){
+      return false;
+    }
+  }
 
    if (iterator === _.identity){
       for (let i = 0; i<collection.length; i++){
-        if (collection[i] !== iterator(collection[i]) || !(_.isBoolean(collection[i]))){
+        if (collection[i] !== iterator(collection[i])){
           return false;
         }
       } return true
@@ -279,11 +284,6 @@
         }
       }return true;
     }
-   for (let i = 0; i<collection.length; i++){   
-    if (falsey.includes(collection[i])){
-      return false;
-     }
-    }return true;
   }
   
     // TIP: Try re-using reduce() here.
