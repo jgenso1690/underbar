@@ -404,8 +404,8 @@
   
     var result;
     
-    if (!result){;
-    return func.apply(this, arguments);
+    if (result !== undefined){;
+    return result;
     }else {
     return function() {
       
