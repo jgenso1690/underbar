@@ -404,7 +404,7 @@
   
     var result;
 
-    if (func.apply(this, arguments) === result);
+    if (func.apply(this, arguments) === result){;
     return result;
     }else {
     return function() {
