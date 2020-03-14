@@ -268,7 +268,7 @@
 
    if (iterator === _.identity){
       for (let i = 0; i<collection.length; i++){
-        if (collection[i] !== iterator(collection[i]) || !._isBoolean(collection[i])){
+        if (collection[i] !== iterator(collection[i]) || !(._isBoolean(collection[i]))){
           return false;
         }
       } return true
@@ -279,7 +279,11 @@
         }
       }return true;
     }
-   
+   for (let i = 0; i<collection.length; i++){   
+    if (falsey.includes(collection[i])){
+      return false;
+     }
+    }return true;
   }
   
     // TIP: Try re-using reduce() here.
