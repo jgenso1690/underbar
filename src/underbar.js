@@ -450,7 +450,7 @@
   // http://mdn.io/Array.prototype.slice
   _.shuffle = function(array) {
 
-    var sorted = array.slice();
+    var sorted = array.slice(0);
     console.log (sorted)
     var unsorted = [];
 
