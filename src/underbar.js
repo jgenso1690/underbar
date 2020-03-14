@@ -401,24 +401,38 @@
   // instead if possible.
   _.memoize = function(func) {
   
-  
+    var lastarguments = "";
     var result;
-    //when is the first time you run it
-    if (result === undefined){;
-      return function() {
-        result = func.apply(this, arguments);
+    
+    return function() ;{
+        if ( lastarguments !== JSON.stringify(arguments)){
+          result = func.apply(this, arguments);
+          lastarguments += JSON.stringify(arguments);
+        }
+        return result;
+        }
+
+  }
+
+
+
+    /*    
+
+    if (result === undefined){
+      
       }
         return result;
         //else it is not the first time;
     }else {
 
       var currentres = func.apply(this, arguments)
+      var lastarguments += JSON.stringify(arguments);
       if (result !== currentres){
     return currentres;}
     
   };
 }
-
+*/
 
 
   // Delays a function for the given number of milliseconds, and then calls
