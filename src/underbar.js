@@ -403,9 +403,9 @@
   
   
     var result;
-    var actual = func.apply(this, arguments)
-    if ( actual === result){;
-    return result;
+    
+    if (!result){;
+    return func.apply(this, arguments);
     }else {
     return function() {
       
