@@ -427,9 +427,11 @@
       for(var keys in arguments){
         arg.push(arguments[keys])
       }
-      console.log(Array.isArray(arg))
+      console.log(arg)
+      console.log(func.apply(this, arg))
        var result = setTimeout(function() {
         func.apply(this, arg);
+
        }, wait)
     }else{
       var result = setTimeout(function() {
