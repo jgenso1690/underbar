@@ -287,7 +287,7 @@
 
   // Determine whether any of the elements pass a truth test. If no iterator is
   // provided, provide a default one
-  _.some = function(collection, iterator ) {
+  _.some = function(collection, iterator = _.identity) {
 
     if (collection.length === 0){
       return false;
