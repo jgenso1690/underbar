@@ -403,21 +403,21 @@
   
   
     var result;
-    
-    if (result !== undefined){;
-      var currentres = func.apply(this, arguments)
-      if (result !== currentres){
-    return currentres;
-      }
-    }else {
-    return function() {
-      
+    //when is the first time you run it
+    if (result === undefined){;
+      return function() {
         result = func.apply(this, arguments);
-       
       }
         return result;
-    };
+        //else it is not the first time;
+    }else {
+
+      var currentres = func.apply(this, arguments)
+      if (result !== currentres){
+    return currentres;}
+    
   };
+}
 
 
 
