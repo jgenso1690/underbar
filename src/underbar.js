@@ -426,15 +426,16 @@
     if (arguments.length > 2){
       for(var keys in arguments){
         arg.push(arguments[keys])
-    }
-  }
-
-    return setTimeout(function() {
-      func.apply(this, arg);
-    }, wait)
-    
-  };
-
+      }
+       return setTimeout(function() {
+        func.apply(this, arg);
+       }, wait)
+    }else{
+      return setTimeout(function() {
+      func.apply(this, arguments);
+      }, wait)
+    };
+}
 
   /**
    * ADVANCED COLLECTION OPERATIONS
