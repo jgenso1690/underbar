@@ -263,13 +263,7 @@
 
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator = _.identity){
-    var falsey = [null, undefined, NaN, "", false]
-
-   for (let i = 0; i<collection.length; i++){   
-    if (falsey.includes(collection[i])){
-      return false;
-    }
-  }
+   
 
    if (iterator === _.identity){
       for (let i = 0; i<collection.length; i++){
