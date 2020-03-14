@@ -430,7 +430,7 @@
       }
 
        return setTimeout(function() {
-        func.apply(this, arg);
+        func(arg);
 
        }, wait)
     
