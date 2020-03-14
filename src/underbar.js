@@ -423,18 +423,17 @@
   _.delay = function(func, wait) {
      var arg = [];
 
-    if (arguments.length > 2){
+    
       for(var keys in arguments){
         var value = arguments[keys]
         arg.push(value)
       }
 
-       var result = setTimeout(function() {
+       return setTimeout(function() {
         func.apply(this, arg);
 
        }, wait)
-    }
-    return result
+    
 }
 
   /**
