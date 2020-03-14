@@ -407,16 +407,11 @@
     if (func.apply(this, arguments) === result){;
     return result;
     }else {
-     return function() {
-      if (!alreadyCalled) {
-        result = func.apply(this, arguments);
-        alreadyCalled = true;
-      }
-        return result;
+     return func.apply(this, arguments);
+       
      }; 
-    }
-   
-  };
+    };
+  
 
   // Delays a function for the given number of milliseconds, and then calls
   // it with the arguments supplied.
