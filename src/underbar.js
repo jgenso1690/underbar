@@ -405,7 +405,10 @@
     var result;
     
     if (result !== undefined){;
-    return result;
+      var currentres = func.apply(this, arguments)
+      if (result !== currentres){
+    return currentres;
+      }
     }else {
     return function() {
       
