@@ -427,6 +427,7 @@
       for(var keys in arguments){
         arg.push(arguments[keys])
       }
+      console.log(arg)
        var result = setTimeout(function() {
         func.apply(this, arg);
        }, wait)
