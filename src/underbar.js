@@ -433,11 +433,7 @@
         func.apply(this, arg);
 
        }, wait)
-    }else{
-      var result = setTimeout(function() {
-      func.apply(this, arguments);
-      }, wait)
-    };
+    }
     return result
 }
 
