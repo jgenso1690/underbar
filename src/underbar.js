@@ -453,7 +453,7 @@
     var sorted = array.slice();
     var unsorted = [];
 
-    for (var i = sorted.length-1; i>sorted.length; i--){
+    for (var i = sorted.length-1; i= 0; i--){
       unsorted.push(sorted[i]);
 
     }
