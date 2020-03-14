@@ -422,11 +422,7 @@
   // call someFunction('a', 'b') after 500ms
   _.delay = function(func, wait) {
     
-
-    var i = 0;
-    while (i< wait ){
-      i++;
-    } return _.once(func)
+    return setTimeout(func, wait);
 
   };
 
