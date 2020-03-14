@@ -268,7 +268,7 @@
 
    if (iterator === _.identity){
       for (let i = 0; i<collection.length; i++){
-        if (collection[i] !== iterator(collection[i]) || !(._isBoolean(collection[i]))){
+        if (collection[i] !== iterator(collection[i]) || !(_.isBoolean(collection[i]))){
           return false;
         }
       } return true
