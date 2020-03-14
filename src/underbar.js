@@ -350,7 +350,7 @@
       for (var keys in arguments){
         var defaults = arguments[keys];
        for (var defkeys in defaults){
-        if (!obj.hasOwnProperty(defkeys)){
+        if (obj.hasOwnProperty(defkeys)=== false){
           obj[key] = defaults[defkeys];
         }
        }
