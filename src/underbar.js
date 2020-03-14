@@ -403,8 +403,8 @@
   
   
     var result;
-
-    if (func.apply(this, arguments) === result){;
+    var actual = func.apply(this, arguments)
+    if ( actual === result){;
     return result;
     }else {
     return function() {
