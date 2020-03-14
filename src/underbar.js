@@ -404,7 +404,7 @@
     var lastarguments = "";
     var result;
     
-    return function() ;{
+    return function() {
         if ( lastarguments !== JSON.stringify(arguments)){
           result = func.apply(this, arguments);
           lastarguments += JSON.stringify(arguments);
