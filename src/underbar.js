@@ -450,10 +450,10 @@
   // http://mdn.io/Array.prototype.slice
   _.shuffle = function(array) {
 
-    var sorted = array.slice();
+    var sorted = array.splice();
     var unsorted = [];
 
-    for (var i = sorted.length-1; i= 0; i--){
+    for (var i = sorted.length-1; i = 0; i--){
       unsorted.push(sorted[i]);
 
     }
