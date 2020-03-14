@@ -422,8 +422,15 @@
   // call someFunction('a', 'b') after 500ms
   _.delay = function(func, wait) {
     
+    if (arguments.length > 2){
+      for(var keys in arguments){
+        if (arguments[keys] !== func || arguments[keys] !==  wait){
+          return arguments[keys];
+        }
+      }
+    }else{
     return setTimeout(func, wait);
-
+    }
   };
 
 
