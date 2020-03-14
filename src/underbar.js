@@ -408,7 +408,7 @@
     return result;
     }else {
     return function() {
-      if (!alreadyCalled) {
+      
         result = func.apply(this, arguments);
        
       }
