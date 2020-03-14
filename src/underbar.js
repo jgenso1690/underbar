@@ -425,6 +425,7 @@
 
     
       for(var keys in arguments){
+        if (arguments[0]!=== arguments[keys] || arguments[1] !== arguments[keys])
         var value = arguments[keys]
         arg.push(value)
       }
