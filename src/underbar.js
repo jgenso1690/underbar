@@ -427,14 +427,15 @@
       for(var keys in arguments){
         arg.push(arguments[keys])
       }
-       return setTimeout(function() {
+       var result = setTimeout(function() {
         func.apply(this, arg);
        }, wait)
     }else{
-      return setTimeout(function() {
+      var result = setTimeout(function() {
       func.apply(this, arguments);
       }, wait)
     };
+    return result
 }
 
   /**
