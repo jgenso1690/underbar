@@ -401,13 +401,15 @@
   // instead if possible.
   _.memoize = function(func) {
   
-  var alreadyCalled = false;
+    
     var result;
+    var paramtrs = func.apply(this, arguments);
 
-    if (func.apply(this, arguments) === result){;
+    if (beforepara === paramtrs){;
     return result;
     }else {
-     return func.apply(this, arguments);
+      var beforepara = func.apply(this, arguments);
+     return beforepara
        
      }; 
     };
