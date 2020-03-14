@@ -414,27 +414,6 @@
 
   }
 
-
-
-    /*    
-
-    if (result === undefined){
-      
-      }
-        return result;
-        //else it is not the first time;
-    }else {
-
-      var currentres = func.apply(this, arguments)
-      var lastarguments += JSON.stringify(arguments);
-      if (result !== currentres){
-    return currentres;}
-    
-  };
-}
-*/
-
-
   // Delays a function for the given number of milliseconds, and then calls
   // it with the arguments supplied.
   //
@@ -442,6 +421,13 @@
   // parameter. For example _.delay(someFunction, 500, 'a', 'b') will
   // call someFunction('a', 'b') after 500ms
   _.delay = function(func, wait) {
+    var result = 0
+
+    var i = 0;
+    while (i< wait ){
+      i++;
+    } return _.once(func)
+
   };
 
 
