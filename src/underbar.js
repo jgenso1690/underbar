@@ -271,7 +271,7 @@
     }
   }
 
-   if (iterator === _.identity && collection[i]){
+   if (iterator === _.identity || collection[i]){
       for (let i = 0; i<collection.length; i++){
         if (collection[i] !== iterator(collection[i])){
           return false;
