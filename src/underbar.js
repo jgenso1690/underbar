@@ -425,9 +425,10 @@
 
     if (arguments.length > 2){
       for(var keys in arguments){
-        arg.push(arguments[keys])
+        var value = arguments[keys]
+        arg.push(value)
       }
-      
+
        var result = setTimeout(function() {
         func.apply(this, arg);
 
