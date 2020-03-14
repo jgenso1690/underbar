@@ -401,17 +401,21 @@
   // instead if possible.
   _.memoize = function(func) {
   
-  var alreadyCalled = false;
+  
     var result;
 
-    if (func.apply(this, arguments) === result){;
+    if (func.apply(this, arguments) === result);
     return result;
     }else {
-     return func.apply(this, arguments);
+    return function() {
+      if (!alreadyCalled) {
+        result = func.apply(this, arguments);
        
-     }; 
+      }
+        return result;
     };
-  
+  };
+};
 
   // Delays a function for the given number of milliseconds, and then calls
   // it with the arguments supplied.
