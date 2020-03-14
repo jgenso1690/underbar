@@ -451,7 +451,15 @@
   _.shuffle = function(array) {
 
     var sorted = array.slice();
-    return sort(sorted)
+    var unsorted = [];
+
+    for (var i = sorted.length-1; i>sorted.length, i++){
+      unsorted.push(sorted[i])
+
+    }
+    return unsorted
+
+
 
   };
 
