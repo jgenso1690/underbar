@@ -427,9 +427,10 @@
       for(var keys in arguments){
         arg.push(arguments[keys])
     }
+  }
 
     return setTimeout(function() {
-      func.apply(this, arguments);
+      func.apply(this, arg);
     }, wait)
     
   };
