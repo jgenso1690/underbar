@@ -289,7 +289,18 @@
   // provided, provide a default one
   _.some = function(collection, iterator) {
 
-    return _.every(collection,iterator )
+    if (collection.length === 0){
+      return false;
+    }
+
+    for (let i = 0; i<collection.length; i++){
+      
+      if (iterator(collection[i])){
+        return true;
+      }
+    }
+    return false;
+    
     // TIP: There's a very clever way to re-use every() here.
   
 }
