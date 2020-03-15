@@ -422,7 +422,7 @@
   // call someFunction('a', 'b') after 500ms
   _.delay = function(func, wait) {
      var arg = [];
-
+     console.log(arguments)
     
       for(var keys in arguments){
         if (arguments[0]!== arguments[keys] || arguments[1] !== arguments[keys]){
