@@ -451,12 +451,16 @@
   _.shuffle = function(array) {
 
     var sorted = array.slice();
-    console.log (array)
+    
     var unsorted = [];
+    
 
-    for (var i = sorted.length-1; i = 0; i--){
+    var i = sorted.length -1
+
+    while (i>= 0){
+
       unsorted.push(sorted[i]);
-
+      i--;
     }
     return unsorted
 
